@@ -1,3 +1,4 @@
+/* -- Global Styles -- */
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +10,12 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+section {
+    padding: 60px;
+}
+
+
+/* -- Header Section -- */
 header{
     padding: 20px 35px;
     background-color: #39a6b2; 
@@ -42,6 +49,45 @@ header nav ul li a{
     font-size: 22px;
 }
 
+/* -- Jumbotron Section --*/
+.hero{
+    background-image: url("../images/hero-bg.jpg");
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-form{
+    border: solid 3px #024e76;
+    background-color: #fce138;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+}
+/* 
+.hero-form p{
+    font-size: 12px;
+}
+
+.hero-form form{
+    margin: .5rem 0;
+}
+
+.hero-form form label{
+    font-size: 12px;
+}
+.hero-form form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+} */
+
+
+/* -- Footer Section -- */
 footer {
     background: #fce138;
     width: 100%;
