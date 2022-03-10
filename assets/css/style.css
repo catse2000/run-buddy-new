@@ -1,4 +1,9 @@
 /* -- Global Styles -- */
+:root{
+    --light-blue: #39a6b2;
+    --dark-blue: #024e76;
+    --yellow: #fce138;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 }
 
 body {
-    color: #39a6b2;
+    color: var(--light-blue);
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -14,24 +19,40 @@ section {
     padding: 60px;
 }
 
+.section-title{
+    font-size: 55px;
+    color: var(--dark-blue);
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    display: inline-block;
+    border-bottom: 3px solid;
+}
+
+.primary-border{
+    border-color: var(--yellow);
+}
+
+.secondary-border{
+    border-color: var(--light-blue);
+}
 
 /* -- Header Section -- */
 header{
     padding: 20px 35px;
-    background-color: #39a6b2; 
+    background-color: var(--light-blue);
 }
 
 header h1{
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--yellow);
     margin: 0;
     display: inline;
 }
 
 header a{
     text-decoration: none;
-    color: #fce138;
+    color: var(--yellow);
 }
 
 header nav{
@@ -59,11 +80,11 @@ header nav ul li a{
 }
 
 .hero-form{
-    border: solid 3px #024e76;
-    background-color: #fce138;
+    border: solid 3px var(--dark-blue);
+    background-color: var(--yellow);
     padding: 20px;
     width: 500px;
-    color: #024e76;
+    color: var(--dark-blue);
     position: absolute;
     bottom: 120px;
     right: 140px;
@@ -79,11 +100,11 @@ header nav ul li a{
 }
 
 .form-input{
-    border: 1px solid #024e76;
+    border: 1px solid var(--dark-blue);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--dark-blue);
     width: 100%;
     margin-bottom: 15px;
 }
@@ -93,8 +114,8 @@ header nav ul li a{
 }
 
 .hero-form button{
-    color: #fce138;
-    background: #024e76;
+    color: var(--yellow);
+    background: var(--dark-blue);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -105,32 +126,55 @@ header nav ul li a{
     text-align: center;
 }
 
-.intro h2{
-    font-size: 55px;
-    color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid #fce138;
-    display: inline-block;
-}
-
 .intro p{
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--light-blue);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
 }
+
+/* -- What You Do Section -- */
+.steps{
+    text-align: center;
+    background: var(--yellow);
+}
+
+.steps div{
+    margin-bottom: 80px;
+}
+
+.steps img{
+    width: 15%;
+    margin: 10px 0;
+}
+
+.steps h3{
+    color: var(--dark-blue);
+    font-size: 46px;
+    margin-top: 10px;
+}
+
+.steps h3 span{
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+.steps p{
+    color: var(--light-blue);
+    font-size: 23px;
+}
+
 /* -- Footer Section -- */
 footer {
-    background: #fce138;
+    background: var(--yellow);
     width: 100%;
     padding: 40px 35px;
 }
 
 footer h2{
     display: inline;
-    color: #024e76;
+    color: var(--dark-blue);
     font-size: 30px;
     margin: 0;
 }
@@ -142,5 +186,5 @@ footer div{
 }
 
 footer a{
-    color: #024e76;
+    color: var(--dark-blue);
 }
