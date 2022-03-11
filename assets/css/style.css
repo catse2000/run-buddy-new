@@ -238,6 +238,21 @@ header nav ul li a{
     color: white;
 }
 
+.contact-info h3{
+    color: var(--yellow);
+    font-size: 32px;
+}
+
+.contact-info p, .contact-info address{
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 20x;
+    font-style: normal;
+}
+
+.contact-info address a{
+    color: var(--yellow);
+}
 
 /* -- Footer Section -- */
 footer {
