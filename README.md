@@ -12,3 +12,5 @@ https://catse2000.github.io/run-buddy-new
 
 ## Contribution
 Made with love by Catse
+
+### ©️2021 Run Buddy, Inc
