@@ -24,6 +24,10 @@ section {
     font-size: 55px;
     color: var(--dark-blue);
     border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
 }
 
 .primary-border{
@@ -44,10 +48,6 @@ section {
 
 .flex-row{
     display: flex;
-    padding-bottom: 20px;
-    text-align: center;
-    margin: 0 auto 35px auto;
-    width: 50%;
 }
 
 /* -- Header Section -- */
@@ -171,29 +171,52 @@ header nav ul li a{
     background: var(--yellow);
 }
 
-.steps div{
-    margin-bottom: 80px;
+.step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid var(--light-blue);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.steps img{
-    width: 15%;
-    margin: 10px 0;
-}
-
-.steps h3{
+.step h3{
     color: var(--dark-blue);
     font-size: 46px;
-    margin-top: 10px;
+    flex: 1 30%;
 }
 
-.steps h3 span{
-    font-size: 38px;
-    text-transform: uppercase;
+.step-info{
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.steps p{
+.step-img{
+    flex: 1 12%;
+    margin-right: 20px;
+}
+
+.step-img img{
+    max-width: 100%;
+}
+
+.step-text{
+    flex: 12;
+}
+
+.step-text h4{
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--dark-blue);
+}
+
+.step-text p{
     color: var(--light-blue);
-    font-size: 23px;
+    font-size: 18px;
 }
 
 /* -- Trainers Section -- */
