@@ -479,21 +479,21 @@ footer a{
     }
 
     .service-grid-container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr) 2fr 1fr;
     }
 
-    .service-grid-item.basic{
-        grid-column: 1;
+    .service-grid.item.basic{
+        grid-column: 1 / span 1;
     }
 
-    .service-grid-item.both, .service-grid-item.cancel{
-        grid-column: 1 / -1;
+    .service.grid.item.both{
+        grid-column: 1/-1;
     }
 
     .service-grid-item.cancel{
-        writing-mode: unset;
-        transform: none;
         grid-row: -1;
+        grid-column: 1 / span 3;
     }
 }
 
