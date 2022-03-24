@@ -3,10 +3,6 @@
     --light-blue: #39a6b2;
     --dark-blue: #024e76;
     --yellow: #fce138;
-    --text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    --box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    --radius-10: 10px;
-    --radius-15: 15px;
 }
 
 *{
@@ -61,15 +57,6 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    background-image: url("../images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-position: 80%;
-    z-index: 9999;
 }
 
 header h1{
@@ -77,7 +64,7 @@ header h1{
     font-size: 36px;
     color: var(--yellow);
     margin: 0;
-    text-shadow: var(--text-shadow);
+
 }
 
 header a{
@@ -101,14 +88,6 @@ header nav ul li a{
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
-    text-shadow: var(--text-shadow);
-}
-
-header nav ul li a:hover{
-    background: var(--yellow);
-    color: var(--dark-blue);
-    border-radius: var(--radius-15);
-    text-shadow: none;
 }
 
 /* -- Jumbotron Section --*/
@@ -120,8 +99,6 @@ header nav ul li a:hover{
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    background-attachment: fixed;
-    background-position: 80%;
 }
 
 .hero-cta{
@@ -137,18 +114,15 @@ header nav ul li a:hover{
     font-style: italic;
     font-size: 55px;
     color: var(--yellow);
-    text-shadow: var(--text-shadow);
 }
 
 .hero-form{
     border: solid 3px var(--dark-blue);
-    background-color: rgba(252, 225, 56, 0.8);
+    background-color: var(--yellow);
     padding: 20px;
     color: var(--dark-blue);
     width: 40%;
     margin: 3.5%;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--radius-15);
 }
 
 .hero-form h3{
@@ -168,77 +142,10 @@ header nav ul li a:hover{
     color: var(--dark-blue);
     width: 100%;
     margin-bottom: 15px;
-    border-radius: var(--radius-10);
-    background-color: rgba(255,255,255, 0.75);
-}
-
-.form-input:focus {
-    background-color: rgba(255,255,255,1);
-    outline: none;
 }
 
 .hero-form label{
     margin: 0 5px;
-}
-
-.checkbox-wrapper input, .radio-wrapper input{
-    opacity: 0;
-}
-
-.checkbox-wrapper label, .radio-wrapper label{
-    position: relative;
-    left: 10px;
-    margin: 10px;
-    line-height: 1.6;
-}
-
-.checkbox-wrapper label::before, .radio-wrapper label::before {
-    content: '';
-    height: 20px;
-    width: 20px;
-    background: rgba(255,255,255, 0.75);
-    border: 1px solid var(--dark-blue);
-    position: absolute;
-    top: -4px;
-    left: -30px;
-}
-
-.radio-wrapper label::before{
-    border-radius: 50%;
-}
-
-.radio-wrapper label::after{
-    content: '';
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--dark-blue);
-    position: absolute;
-    left: -29px;
-    top: -3px;
-    background-image: radial-gradient(circle, var(--light-blue), var(--dark-blue));
-}
-
-.checkbox-wrapper label::after{
-    content: '';
-    height: 6px;
-    width: 14px;
-    border-left: 2px solid var(--dark-blue);
-    border-bottom: 2px solid var(--dark-blue);
-    position: absolute;
-    left: -26px;
-    top: 1px;
-    transform: rotate(-58deg);
-}
-
-.checkbox-wrapper input + label::after,
-.radio-wrapper input + label::after {
-    content: none;
-}
-
-.checkbox-wrapper input:checked + label::after,
-.radio-wrapper input:checked + label::after {
-    content: '';
 }
 
 .hero-form button{
@@ -247,11 +154,6 @@ header nav ul li a:hover{
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: var(--radius-10);
-}
-
-.hero-form button:hover{
-    background-color: var(--light-blue);
 }
 
 /* -- What We Do Section -- */
@@ -274,14 +176,11 @@ header nav ul li a:hover{
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
+    border-bottom: 1px solid var(--light-blue);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-}
-
-.step:not(:last-child){
-    border-bottom: 1px solid var(--light-blue);
 }
 
 .step h3{
@@ -335,69 +234,10 @@ header nav ul li a:hover{
     background: var(--dark-blue);
     color: var(--yellow);
     flex: 1;
-
 }
 
-.trainer-1{
-    background-image: url("../images/trainer-1.jpg");
-}
-
-.trainer-2{
-    background-image: url("../images/trainer-2.jpg");
-}
-
-.trainer-3{
-    background-image: url("../images/trainer-3.jpg");
-}
-
-.trainer-img{
+.trainer img{
     width: 100%;
-    min-height: 300px;
-    background-size: cover;
-    display: flex;
-    padding: 15px;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
-}
-
-.trainer-img::after{
-    content: '';
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(252, 225, 56, 0.3), rgba(2, 78, 118));
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: .5s;
-}
-
-.trainer:hover .trainer-img::after{
-    opacity: 1;
-}
-
-.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4{
-    top: 0px;
-}
-
-
-.trainer-img h3{
-    position: relative;
-    z-index: 2;
-    font-size: 28px;
-    margin-bottom: 5px;
-    top: 200px;
-    transition: 0.6s;
-}
-
-.trainer-img h4{
-    position: relative; 
-    z-index: 3;
-    font-size: 22px;
-    top: 200px;
-    transition: 0.6s;
-    transition-delay: 0.2s;
 }
 
 .trainer-bio{
@@ -407,14 +247,12 @@ header nav ul li a:hover{
 
 .trainer-bio h3{
     font-size: 28px;
-    display: none;
 }
 
 .trainer-bio h4{
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
-    display: none;
 }
 
 .trainer-bio p{
@@ -526,13 +364,6 @@ header nav ul li a:hover{
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
-    border-radius: var(--radius-10);
-    background-color: rgba(255,255,255,0.75);
-}
-
-.contact-form input:focus, .contact-form textarea:focus{
-    background-color: rgba(255,255,255,1);
-    outline: none;
 }
 
 .contact-form button{
@@ -543,12 +374,6 @@ header nav ul li a:hover{
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
-    border-radius: var(--radius-10);
-}
-
-.contact-form button:hover{
-    color: var(--yellow);
-    background: var(--light-blue);
 }
 
 /* -- Footer Section -- */
@@ -582,7 +407,6 @@ footer a{
     header {
         padding-bottom: 0;
         justify-content: center;
-        position: relative;
     }
 
     header h1{
@@ -655,29 +479,21 @@ footer a{
     }
 
     .service-grid-container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr) 2fr 1fr;
     }
 
-    .service-grid-item.basic{
-        grid-column: 1;
+    .service-grid.item.basic{
+        grid-column: 1 / span 1;
     }
 
-    .service-grid-item.both, .service-grid-item.cancel{
-        grid-column: 1 / -1;
+    .service.grid.item.both{
+        grid-column: 1/-1;
     }
 
     .service-grid-item.cancel{
-        writing-mode: unset;
-        transform: none;
         grid-row: -1;
-    }
-
-    .trainer-img::after, .trainer-img div{
-        display: none;
-    }
-
-    .trainer-bio h3, .trainer-bio h4{
-        display: block;
+        grid-column: 1 / span 3;
     }
 }
 
